@@ -1,0 +1,48 @@
+# ==================== #
+# Eve-ng spécifique    #
+# ==================== #
+
+# Images de machines virtuelles
+*.qcow2
+*.vmdk
+*.ova
+*.iso
+
+# Fichiers temporaires Eve-ng
+*/tmp/*
+*.id
+*.mac
+*/virtioa.qcow2
+*/virtiob.qcow2
+
+# Fichiers de lock et cache
+*.lock
+*.cache
+/opt/unetlab/data/Logs/*
+/opt/unetlab/tmp/*
+
+# ==================== #
+# Général              #
+# ==================== #
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs et captures volumineuses
+*.pcap
+*.packet
+*.log
+
+# Exception : on garde les petites captures texte
+!captures/*.txt
+
+# Documents temporaires
+*.backup
+*.bak
