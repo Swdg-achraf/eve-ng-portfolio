@@ -1,0 +1,104 @@
+
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$v0kp$mHYtRHxaBWfFiqdthbaX30
+enable password 7 00010503500E5D
+!
+no aaa new-model
+memory-size iomem 5
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+! 
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.2.1 255.255.255.0
+ speed auto
+ half-duplex
+ no cdp enable
+ no mop enabled
+!
+interface FastEthernet0/1
+ ip address 192.168.1.1 255.255.255.0
+ duplex auto
+ speed auto
+ no cdp enable
+!
+ip forward-protocol nd
+!
+!
+ip http server
+no ip http secure-server
+!
+snmp-server community public RO
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+line aux 0
+line vty 0 4
+ password 7 060319241B1650
+ login
+!
+no process cpu extended
+no process cpu autoprofile hog
+!
+end

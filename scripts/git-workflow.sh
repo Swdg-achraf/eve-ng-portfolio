@@ -26,9 +26,6 @@ main() {
         "save")
             save_lab
             ;;
-        "export-configs")
-            export_configs
-            ;;
         "help"|*)
             show_help
             ;;
@@ -174,38 +171,6 @@ save_lab() {
         fi
     else
         warning "Aucun changement à commiter"
-    fi
-}
-
-# ============================================
-# Fonction: Export des configurations
-# ============================================
-export_configs() {
-    echo -e "\n${BLUE}=== EXPORT DES CONFIGURATIONS ===${NC}\n"
-    
-    # Demander le nom du lab
-    read -p "Nom du lab à exporter (laisser vide pour tous): " export_lab
-    
-    if [ -z "$export_lab" ]; then
-        info "Export de tous les labs..."
-        # À compléter avec votre logique d'export
-    else
-        if [ ! -d "lab-topologies/$export_lab" ]; then
-            error "Le lab '$export_lab' n'existe pas!"
-            return 1
-        fi
-        
-        info "Export des configurations pour: $export_lab"
-        # À compléter avec votre logique d'export
-        
-        # Créer un timestamp
-        timestamp=$(date +%Y%m%d_%H%M%S)
-        
-        # Exemple: créer un archive des configs
-        tar -czf "lab-topologies/$export_lab/configs/backup_$timestamp.tar.gz" \
-            -C "lab-topologies/$export_lab/configs" . 2>/dev/null || true
-        
-        success "Export terminé pour $export_lab"
     fi
 }
 
