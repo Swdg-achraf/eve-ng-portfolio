@@ -1,12 +1,9 @@
 # Portfolio de Labs Réseau - Eve-ng
 
 ## 👤 À propos
-[Votre nom] - Étudiant/Administrateur Réseau  
-[Brief description de votre parcours]
+[Hassan Achraf Ammar SAWADOGO] - IT - Network and System
 
 ## 🎯 Objectifs
-- Maîtriser les protocoles réseaux de manière pratique
-- Documenter ma progression technique
-- Constituer un portfolio professionnel
-
-## 🏗️ Structure
+- Maîtriser les bases réseaux de manière pratique;
+- Documenter ma progression technique;
+- Constituer un portfolio professionnel.
