@@ -1,7 +1,7 @@
 # Lab: lab-01-ip-addressing
 
 ## 📋 Informations générales
-- **Compétence**: Addressage IP
+- **Compétence**: Addressage IP
 - **Date de création**: 20/02/2026
 - **Description**: 
 
@@ -10,12 +10,12 @@
 ![Topologie](diagrams/lab-ip-addressing-01.png)
 
 ### Équipements
-| Type | Nombre | Modèle | Version |
-|------|--------|--------|---------|
-| Routeur | 1 | Cisco 3725 | 12.4(15)T14 |
-| Switch | 2 | Cisco I86BI_LINUXL2-ADVENTERPRISEK9-M | 15.2 |
-| Desktop Linux | 2 | Linux Debian & Kali |  |
-| VPC | 4 | Virtual PC Simulator |  1.3 (0.8.1) |
+| Type          | Nombre | Modèle                                | Version     |
+|---------------|--------|---------------------------------------|-------------|
+| Routeur       | 1      | Cisco 3725                            | 12.4(15)T14 |
+| Switch        | 2      | Cisco I86BI_LINUXL2-ADVENTERPRISEK9-M | 15.2        |
+| Desktop Linux | 2      | Linux Debian & Kali                   |             |
+| VPC           | 4      | Virtual PC Simulator                  | 1.3 (0.8.1) |
 
 ## 🔧 Configuration IP
 
