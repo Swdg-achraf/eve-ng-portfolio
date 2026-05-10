@@ -1,26 +1,29 @@
 # Lab: lab-01-ip-addressing
 
 ## 📋 Informations générales
-- **Compétence**: Adrrdressage IP
+- **Compétence**: Addressage IP
 - **Date de création**: 20/02/2026
 - **Description**: 
 
 
 ## 📐 Topologie
-![Topologie](diagrams/topology.png)
+![Topologie](diagrams/lab-ip-addressing-01.png)
 
 ### Équipements
 | Type | Nombre | Modèle | Version |
 |------|--------|--------|---------|
-| Routeur | 0 | Cisco IOSv | 15.7 |
-| Switch | 0 | Cisco IOSvL2 | 15.2 |
-| Serveur | 0 | Linux Ubuntu | 20.04 |
+| Routeur | 1 | Cisco 3725 | 12.4(15)T14 |
+| Switch | 2 | Cisco I86BI_LINUXL2-ADVENTERPRISEK9-M | 15.2 |
+| Desktop Linux | 2 | Linux Debian & Kali |  |
+| VPC | 4 | Virtual PC Simulator |  1.3 (0.8.1) |
 
 ## 🔧 Configuration IP
 
 ### Routeurs
-| Device | Interface | IP/Mask | Description |
-|--------|-----------|---------|-------------|
+| Device | Interface            | IP/Mask        | Description               |
+|--------|----------------------|----------------|---------------------------|
+| 3725   |fa0/1 -> 192.168.1.1  |  255.255.255.0 | interface du réseau net 2 |
+|        |fa0.0 -> 192.168.2.1  |  255.255.255.0 | interface du réseau net 1 |
 
 ### Switches
 | Device | VLAN | Interface | Mode |
