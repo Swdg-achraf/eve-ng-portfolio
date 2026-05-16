@@ -3,16 +3,16 @@
 ## 📋 Informations générales
 - **Compétence**: VLAN, ACL
 - **Date de création**: 14/05/2026
-- **Description**: 
+- **Description**: Lab sur les VLAN et les ACL.
 
 
 ## 📐 Topologie
-![Topologie](lab-02-vlan-acl/diagrams/topology.png)
+![Topologie](lab-02-vlan-acl/diagrams/lab-02-vlan-config-correct.png)
 
 ### Équipements
 | Type          | Nombre | Modèle                                | Version     |
 |---------------|--------|---------------------------------------|-------------|
-| Routeur       | 1      | Cisco 3725                            | 12.4(15)T14 |
+| Routeur       | 0      | Cisco 3725                            | 12.4(15)T14 |
 | Switch        | 2      | Cisco I86BI_LINUXL2-ADVENTERPRISEK9-M | 15.2        |
 | Desktop Linux |        | Linux Debian & Kali                   |             |
 | VPC           | 6      | Virtual PC Simulator                  | 1.3 (0.8.1) |
@@ -25,8 +25,13 @@
 |--------|-----------|---------|-------------|
 
 ### Switches
-| Device | VLAN | Interface | Mode |
-|--------|------|-----------|------|
+| Device | VLAN      | Interface | Mode |
+|--------|-----------|-----------|------|
+|S1      |10,20,30   |e0/0,e0/2-3|access|
+|S1      |99 (Native)|e1/0       |trunk |
+|---------------------------------------|
+|S2      |10,20,30   |e0/1-3     |access|
+|S2      |99 (Native)|e1/0       |trunk |
 
 ## 📁 Fichiers inclus
 - `lab-02-vlan-acl.unl` : Topologie Eve-ng
@@ -39,7 +44,8 @@
 3. Démarrer les nœuds
 
 ## 📝 Notes
-- Note 1
+- Certains modèles de switch cisco nécessite l'activation de l'encapsulation dot1q pour assurer le trunk de leurs interfaces. Pour se faire, la commande suivante est utilisée : "switchport trunk encapsulation dot1q".
+ 
 - Note 2
 
 ---
