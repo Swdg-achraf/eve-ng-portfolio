@@ -7,7 +7,7 @@
 
 
 ## 📐 Topologie
-![Topologie](lab-02-vlan-acl/diagrams/lab-02-vlan-config-correct.png)
+![Topologie](diagrams/lab-02-vlan-config-correct.png)
 
 ### Équipements
 | Type          | Nombre | Modèle                                | Version     |
@@ -29,7 +29,7 @@
 |--------|-----------|-----------|------|
 |S1      |10,20,30   |e0/0,e0/2-3|access|
 |S1      |99 (Native)|e1/0       |trunk |
-|---------------------------------------|
+|                                       |
 |S2      |10,20,30   |e0/1-3     |access|
 |S2      |99 (Native)|e1/0       |trunk |
 
@@ -45,8 +45,6 @@
 
 ## 📝 Notes
 - Certains modèles de switch cisco nécessite l'activation de l'encapsulation dot1q pour assurer le trunk de leurs interfaces. Pour se faire, la commande suivante est utilisée : "switchport trunk encapsulation dot1q".
- 
-- Note 2
 
 ---
 *Document généré automatiquement le jeu. 14 mai 2026 17:28:12 UTC*
